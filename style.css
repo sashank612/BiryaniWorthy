@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('biryanibackground.png'); /* Using the biryani background image */
+    background-size: cover;
+    background-attachment: fixed;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif; /* More Hyderabadi style font */
+    color: #e63946;
+    font-size: 48px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(255,255,255,0.7);
+}
+
+.tagline {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.9);
+}
+
+.calculator {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    border: 2px solid #e63946; /* Red border */
+}
+
+.input-area {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    width: 150px;
+    text-align: center;
+    border: 2px solid #e63946;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #FF6B00; /* Orange like the Paradise Biryani pot */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+button:hover {
+    background-color: #e63946;
+    transform: scale(1.05);
+}
+
+.restaurant-selector {
+    margin-bottom: 20px;
+}
+
+select {
+    padding: 8px;
+    font-size: 16px;
+    margin-left: 10px;
+    border: 2px solid #e63946;
+    border-radius: 5px;
+}
+
+.result {
+    padding: 20px;
+    display: none;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#biryani-result {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #e63946;
+}
+
+#telugu-reaction {
+    font-style: italic;
+    font-size: 18px;
+    color: #333;
+    padding: 10px;
+    background-color: rgba(255, 240, 219, 0.7);
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+footer {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+}
+
+.biryani-img {
+    max-width: 150px;
+    margin: 20px auto;
+    border-radius: 50%;
+    border: 3px solid #e63946;
+    box-shadow: 0 0 15px rgba(230, 57, 70, 0.3);
+    transition: transform 0.5s;
+}
+
+.biryani-img:hover {
+    transform: rotate(10deg);
+}
+
+/* Animations */
+.title-animation {
+    animation: steam 3s infinite ease-in-out;
+}
+
+@keyframes steam {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
+.plates-animation {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+    flex-wrap: wrap;
+}
+
+.plate {
+    width: 40px;
+    height: 40px;
+    background-color: #FF6B00;
+    border-radius: 50%;
+    margin: 0 5px 10px 5px;
+    display: inline-block;
+    position: relative;
+    animation: plateAppear 0.5s ease-in-out;
+}
+
+.plate:after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: #fff1da;
+    border-radius: 50%;
+}
+
+@keyframes plateAppear {
+    0% { transform: scale(0) rotate(-30deg); opacity: 0; }
+    100% { transform: scale(1) rotate(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
